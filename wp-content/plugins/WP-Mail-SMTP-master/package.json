@@ -1,0 +1,55 @@
+{
+  "name": "wp-mail-smtp",
+  "version": "4.4.0",
+  "description": "Make email delivery easy for WordPress. Connect with SMTP, Gmail, Outlook, SendGrid, Mailgun, Zoho, SES, and more.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awesomemotive/wp-mail-smtp.git"
+  },
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/awesomemotive/wp-mail-smtp/issues"
+  },
+  "homepage": "https://wpmailsmtp.com",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "eslint-plugin-jsdoc": "^22.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-debug": "^5.0.1",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-include": "^2.4.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "gulp-zip": "^4.2.0",
+    "husky": "^9.0.11",
+    "lint-diff": "file:.packages/npm/lint-diff",
+    "lodash": "^4.17.21",
+    "merge-stream": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.69.6",
+    "trim-newlines": "^5.0.0",
+    "y18n": "^5.0.8",
+    "yargs": "^17.7.2",
+    "yargs-parser": "^13.1.2"
+  },
+  "engines": {
+    "node": ">=18.19.0",
+    "npm": ">=10.2.3"
+  },
+  "scripts": {
+    "gulp": "node ./node_modules/gulp/bin/gulp.js",
+    "lint-diff": "cross-env node node_modules/lint-diff/dist/lint-diff.js",
+    "phpcs-diff": "cross-env php vendor/bin/phpcs-diff",
+    "cs": "run-s --silent --continue-on-error lint-diff phpcs-diff"
+  }
+}

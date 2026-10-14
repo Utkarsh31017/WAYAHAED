@@ -1,0 +1,380 @@
+// Education styles.
+
+// Notice bar.
+@media screen and (max-width: 1023px) {
+	#wp-mail-smtp-notice-bar {
+		display: none !important;
+	}
+}
+
+#wp-mail-smtp-notice-bar {
+	max-height: 35px;
+	position: relative;
+	margin-bottom: -3px;
+	transition: all .3s ease-out;
+	overflow: hidden;
+
+	&.out {
+		max-height: 3px;
+	}
+
+	.wp-mail-smtp-notice-bar-container {
+		background-color: #DDDDDD;
+		border-top: 3px solid $orange;
+		color: $secondary-text;
+		text-align: center;
+		padding: 7px;
+	}
+
+	a {
+		color: $orange;
+	}
+
+	a:hover {
+		color: $orange-dark;
+	}
+
+	.dismiss {
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: none;
+		padding: 5px;
+		margin-top: 4px;
+		background: 0 0;
+		color: #72777c;
+		cursor: pointer;
+	}
+
+	.dismiss:before {
+		background: 0 0;
+		color: #72777c;
+		content: "\f335";
+		display: block;
+		font: normal 20px/20px dashicons;
+		speak: none;
+		height: 20px;
+		text-align: center;
+		width: 20px;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+#screen-meta-links .screen-meta-toggle {
+	position: absolute;
+	right: 20px;
+	top: auto;
+}
+
+#wp-mail-smtp {
+
+	/* General styles. */
+	.wp-mail-smtp-product-education {
+
+		&__row {
+			border-bottom: 1px solid #e4e4e4;
+			padding: 25px 0 5px;
+			font-size: 14px;
+			line-height: 1.3;
+			max-width: 1005px;
+
+			& > *:last-child {
+				border-bottom: none !important;
+			}
+
+			&--inactive {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+
+			&--full-width {
+				max-width: unset;
+			}
+
+			&--no-border {
+				border-bottom: none !important;
+			}
+
+			&--no-padding {
+				padding: 0 !important;
+			}
+
+			&:first-of-type {
+				padding-top: 10px;
+			}
+
+			&:last-of-type + .wp-mail-smtp-btn-upgrade {
+				margin-top: 25px;
+			}
+		}
+
+		&__heading {
+			display: flex;
+			align-items: center;
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-size: 20px;
+			line-height: 24px;
+			color: $primary-text;
+
+			&:after {
+				content: '';
+				margin-left: 10px;
+				background-image: url('../images/pro-badge-small.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 35px;
+				height: 16px;
+			}
+		}
+
+		&__description {
+			margin-top: 0;
+			margin-bottom: 20px;
+			color: $secondary-text;
+			font-size: 14px;
+			line-height: 1.5em;
+		}
+
+		&__upgrade-btn--top {
+			margin-bottom: 20px;
+		}
+
+		&__screenshots {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include media("<phone") {
+				flex-direction: column;
+			}
+
+			& > div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 0 25px 20px 0;
+
+				@include media("<phone") {
+					margin-right: 0;
+					max-width: unset !important;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				a {
+					position: relative;
+					margin-bottom: 10px;
+					background: #FFFFFF;
+					border: 5px solid #FFFFFF;
+					box-sizing: border-box;
+					border-radius: 4px;
+
+					&:after {
+						content: "";
+						position: absolute;
+						opacity: 0;
+						height: 100%;
+						width: 100%;
+						top: 0;
+						left: 0;
+						background-color: rgba(68, 68, 68, 0.15);
+						background-image: url('../../assets/images/icons/zoom.svg');
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: 50px;
+						transition: all 0.3s;
+					}
+
+					&:hover:after {
+						opacity: 1;
+					}
+				}
+
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+
+				span {
+					font-size: 14px;
+					line-height: 18px;
+					text-align: center;
+					color: $secondary-text;
+				}
+			}
+
+			&--two > div {
+				max-width: 487px;
+			}
+
+			&--three > div {
+				max-width: 316px;
+			}
+		}
+
+		&__list {
+
+			& > h4 {
+				margin-top: 0;
+				margin-bottom: 20px;
+				font-size: 16px;
+				line-height: 20px;
+				color: $primary-text;
+			}
+
+			& > div {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			ul {
+				width: 290px;
+				margin: 0 40px 20px 0;
+
+				li {
+					display: flex;
+					align-items: center;
+					font-size: 14px;
+					line-height: 20px;
+					margin-bottom: 0;
+					color: $secondary-text;
+
+					& + li {
+						margin-top: 20px;
+					}
+
+					&:before {
+						content: url('../../assets/images/icons/check-solid.svg');
+						width: 16px;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	/* Export email logs education page. */
+	#wp-mail-smtp-tools-export-email-logs-product-education {
+
+		section {
+			margin-bottom: 20px;
+			cursor: not-allowed;
+
+			&:last-of-type {
+				margin-bottom: 20px;
+			}
+
+			h5 {
+				clear: both;
+				margin: 0 0 10px 0;
+				color: $primary-text;
+				font-size: 16px;
+				font-weight: 600;
+			}
+
+			label {
+				clear: both;
+				float: left;
+				margin: 3px 0 3px 0;
+			}
+
+			.wp-mail-smtp-date-selector {
+				width: 200px;
+				cursor: pointer;
+			}
+
+			.wp-mail-smtp-search-box-field {
+				width: 200px;
+			}
+
+			.wp-mail-smtp-search-box-term {
+				width: 300px;
+			}
+		}
+	}
+
+	/* Controls education page. */
+	#wp-mail-smtp-email-controls-product-education {
+
+		.wp-mail-smtp-product-education__row--inactive {
+			padding-top: 20px;
+			padding-bottom: 0;
+		}
+
+		.wp-mail-smtp-setting-row:last-child {
+			border-bottom: none;
+		}
+	}
+
+	/* Network education page. */
+	.wp-mail-smtp-page-nw-product-edu {
+		h2 {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.badge {
+			margin: 0 0 2px 7px;
+			vertical-align: middle;
+			width: 40px;
+			height: 17px;
+		}
+
+		.wp-mail-smtp-setting-row-multisite {
+			color: #9a9a9a;
+
+			p.desc {
+				color: #bababa;
+			}
+
+			input[type=checkbox]:disabled {
+				border-color: #aaa;
+			}
+		}
+
+		.wp-mail-smtp-setting-row-no-setting {
+			margin-top: 30px;
+		}
+	}
+}
+
+.wp-mail-smtp-lite #wp-mail-smtp {
+
+	/* Email reports education page. */
+	.wp-mail-smtp-page-reports {
+
+		.wp-mail-smtp-page-title .page-title {
+			position: relative;
+
+			&:after {
+				content: '';
+				display: inline-block;
+				margin-left: 10px;
+				background-image: url('../images/pro-badge-small.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 35px;
+				height: 16px;
+			}
+		}
+	}
+
+	/* Gmail mailer one-click setup. */
+	#wp-mail-smtp-setting-row-gmail-one_click_setup_enabled-lite,
+	#wp-mail-smtp-setting-row-misc-rate_limit-lite {
+			.wp-mail-smtp-toggle::after {
+				content: '';
+				margin-left: 10px;
+				background-image: url('../images/pro-badge-small.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 35px;
+				height: 16px;
+			}
+	}
+}
+
+

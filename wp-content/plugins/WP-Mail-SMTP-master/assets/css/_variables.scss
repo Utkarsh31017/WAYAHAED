@@ -1,0 +1,41 @@
+// Color styles
+$primary-text: #2c3337;
+$secondary-text: #50575e;
+$description-text: #646970;
+$field-text: #2c3337;
+$field-border: #8d8f95;
+$steel: #738E9E;
+$steel-dark: #395360;
+$orange: #E27730;
+$orange-dark: #B85A1B;
+$link: #2171B1;
+$link-hover: #135e96;
+$positive: #00A32A;
+$negative: #D63638;
+
+$grey: #A9A9A9;
+
+$modal-orange: #E27730;
+$modal-green: #00A32A;
+$modal-red: #D63638;
+$modal-blue: #3582c4;
+
+// Effect styles
+$shadow-sm:  0px 1px 2px rgba(0, 0, 0, 0.07);
+$shadow-md:  0px 2px 4px rgba(0, 0, 0, 0.07);
+$shadow-lg:  0px 2px 10px rgba(0, 0, 0, 0.15);
+
+$content-padding: 20px;
+$padding-default: 30px;
+
+$border-color: #E5E6E6;
+$border-radius: 4px;
+$border: 1px solid $border-color;
+
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 600px,
+	'ipad': 768px,
+	'tablet': 782px,
+	'desktop': 960px,
+);

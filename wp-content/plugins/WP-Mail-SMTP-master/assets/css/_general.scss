@@ -1,0 +1,28 @@
+// Core admin style overrides.
+#wpcontent {
+	padding-left: 0 !important;
+	position: relative;
+
+	@include media("<=phone") {
+		padding-top: 46px;
+	}
+}
+
+#wpbody {
+	@include media("<=phone") {
+		padding-top: 0;
+	}
+}
+
+// Fade in-out with a "peak stop" animation.
+@-webkit-keyframes wp-mail-smtp-fade-in-stop-out {
+	0%,100% { opacity: 0 }
+	35% { opacity: 1 }
+	65% { opacity: 1 }
+}
+
+@keyframes wp-mail-smtp-fade-in-stop-out {
+	0%,100% { opacity: 0 }
+	35% { opacity: 1 }
+	65% { opacity: 1 }
+}
